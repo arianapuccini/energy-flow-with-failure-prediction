@@ -1,9 +1,9 @@
 # energy-flow-with-failure-prediction
 # Vehicle Fault Detection — ML + Compartmental Modeling
 
-A pipeline that combines a Python machine learning classifier with a Julia ODE model to simulate, detect, and analyze vehicle subsystem failures.
+A pipeline that combines a Python machine learning classifier with a Julia linear compartmental model to simulate vehicle system failures
 
-This project approaches vehicle fault detection from two angles; Python trains a logistic regression classifier on simulated sensor data to predict engine failures from simulated real-time data. Julia models the underlying physics of energy flow between vehicle subsystems using an ODE generated from a linear compartmental model, and applies the Python-trained model coefficients directly to evaluate fault risk is the highest. The two components are linked by exported CSV files that the Python script produces.
+This project has two main software pieces; Python trains a logistic regression classifier on simulated sensor data to predict engine failures from simulated real-time data. Julia models the underlying physics of energy flow between vehicle subsystems using an ODE generated from a linear compartmental model, and applies the Python-trained model coefficients directly to evaluate fault risk is the highest. The two components are linked by exported CSV files that the Python script produces.
 
 truckPredictor.py
 1. Simulates 5,000 sensor readings across engine temperature, vibration, oil pressure, and RPM
